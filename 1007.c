@@ -1,36 +1,7 @@
 #include <stdio.h>
+#include "distributeur.h"
 
-#define RECUPERER 0
-#define CONSULTER 1
-#define RETIRER 2
-#define AJOUTER 3
 
-void consulterSolde(float solde)
-{
-    printf("Votre solde est de : %f\n", solde);
-}
-
-void retirerArgent(float* x)
-{
-    float somme;
-    printf("Somme à retirer ?");
-    scanf("%f", &somme);
-    // modification du solde
-    *x -= somme;
-    // affichage du solde
-    consulterSolde(*x);
-}
-
-void ajouterArgent(float* x)
-{
-    float somme;
-    printf("Somme à déposer ?");
-    scanf("%f", &somme);
-    // modification du solde
-    *x += somme;
-    // affichage du solde
-    consulterSolde(*x);
-}
 
 int main(void)
 {
